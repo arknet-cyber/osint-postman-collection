@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "e698e9d8-234d-4c21-840d-52c3602c233a",
+		"name": "OSINT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29925065"
+	},
+	"item": [
+		{
+			"name": "Email Investigation",
+			"item": []
+		},
+		{
+			"name": "IP Investigation",
+			"item": [
+				{
+					"name": "Basic IP Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/8.8.8.8?token={{token}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"8.8.8.8"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DNS Investigation",
+			"item": []
+		}
+	]
+}
