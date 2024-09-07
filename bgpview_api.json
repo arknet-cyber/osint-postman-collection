@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "e698e9d8-234d-4c21-840d-52c3602c233a",
+		"name": "OSINT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29925065"
+	},
+	"item": [
+		{
+			"name": "Email Investigation",
+			"item": []
+		},
+		{
+			"name": "IP Investigation",
+			"item": [
+				{
+					"name": "Basic IP Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/8.8.8.8?token={{token}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"8.8.8.8"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "{{token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IP Info Detailed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ip/{{ip_address}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ip",
+								"{{ip_address}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IP Prefix",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/prefix/{{ip_address}}/24",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"prefix",
+								"{{ip_address}}",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DNS Investigation",
+			"item": [
+				{
+					"name": "ASN Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/asn/{{asn_number}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"asn",
+								"{{asn_number}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ASN Prefixes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/asn/{{asn_number}}/prefixes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"asn",
+								"{{asn_number}}",
+								"prefixes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ASN Peers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/asn/{{asn_number}}/peers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"asn",
+								"{{asn_number}}",
+								"peers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ASN Upstream",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/asn/{{asn_number}}/upstreams",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"asn",
+								"{{asn_number}}",
+								"upstreams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ASN Downstreams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/asn/{{asn_number}}/downstreams",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"asn",
+								"{{asn_number}}",
+								"downstreams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ASN IXS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/asn/{{asn_number}}/ixs",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"asn",
+								"{{asn_number}}",
+								"ixs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IX ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ix/ix_id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ix",
+								"ix_id"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Term",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/search?query_term=digitalocean",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "query_term",
+									"value": "digitalocean"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
